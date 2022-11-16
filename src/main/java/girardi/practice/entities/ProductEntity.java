@@ -12,22 +12,23 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "product")
 public class ProductEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
+    @Column(name = "name_product", nullable = false)
     private String name;
 
-    @Column(nullable = false)
+    @Column(name = "value_product", nullable = false)
     private BigDecimal value;
 
-    @Column(nullable = false)
+    @Column(name = "quantity_product", nullable = false)
     private Long quantity;
 
-    @Column
+    @Column(name = "details_product")
     private String details;
 
 
