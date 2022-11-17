@@ -15,5 +15,9 @@ public class ProductService {
         return Optional.ofNullable(productRepository.save(productEntity));
     }
 
+    public Optional<ProductEntity> findProductById(Long productId) {
+        return productRepository.findById(productId);
+    }
+
 
 }
